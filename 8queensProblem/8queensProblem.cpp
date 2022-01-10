@@ -77,7 +77,7 @@ void solve() {
     for (int i = 0; i < pow(8, 8); i++) {
         int j = 0;
         for (queen& q : queens) {
-            q.pos.y = (i % modofq[7-j]) / divofq[7-j];
+            q.pos.y = (i % modofq[j]) / divofq[j];
             j++;
         }
         if (isValid(queens)) {
